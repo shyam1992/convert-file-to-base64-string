@@ -1,0 +1,58 @@
+.header{
+    background-color: #36c36c;
+    color: white;
+    font-family: comic sans ms,cursive,sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index:99999;
+    padding-top:10px;
+}
+.p1{
+    font-size: 20px;
+}
+.p2{
+	font-size:18px;
+}
+
+.filebrowserSection{
+top: 20%;
+ position: absolute;
+ width: 100%
+}
+#hiddenFileBrowser{
+	visibility:hidden;
+}
+.base64PaintArea{
+    overflow: auto;
+    position: absolute;
+    top: 40%;
+    word-wrap: break-word;
+    width:100%;
+}
+.base64col{
+	border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 4px 3px #d4d4d4;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+.displaynone{
+	display:none !important;
+}
+.blur{
+	color: #c4e4c4 !important;
+}
+.progressbar{
+	position: absolute;
+    top: 50%;
+    width: 100%;
+}
+@media screen and (max-width: 450px) {
+.base64PaintArea{
+    overflow: auto;
+    position: absolute;
+    top: 50% !important;
+    word-wrap: break-word;
+    width:100%;
+}
+}
+

@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Web-worker.in | labs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<section class="container-fluid">
+		<div id="header" class="header row">
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+				<p class="p1">Web-Worker.in</p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+			<p class="p2">Base64 Converter</p>	
+			</div>
+		</div>
+		</section>
+		<section class="filebrowserSection container-fluid">
+		<div class="row">	
+			<div class="col-xs-0 col-sm-0 col-md-4 col-lg-4"></div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+			<input type="file" onchange="webworker.fileSelected(this,event)" id="hiddenFileBrowser"/>
+			<form class="form-inline">
+							<input id="ShownInputBox" class="form-control" data-toggle="tooltip" title="Please select a file" placeholder="No file selected..."/>
+			<button onclick="webworker.selectFile(event)" class="btn btn-default" type="button">Select a file</button>
+			<button onclick="webworker.convertFile(this,event)" class="btn btn-default blur" type="button" id="convertbtn">Convert the file</button>
+			<button onclick="webworker.downloadAsTextFile(event)" class="btn btn-default displaynone" type="button" id="downloadbtn">Download As a Text File</button>
+			</form>
+			</div>
+			<div class="col-xs-0 col-sm-0 col-md-2 col-lg-3"></div>
+		</div>
+		</section class="container-fluid">
+		<section class="base64PaintArea row">
+			<a id="downloadlink" href="" class="displaynone" target="_blank">download</a>
+			<div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+			<div id="base64PaintArea" class="col-xs-12 col-sm-12 col-md-10 col-lg-10 base64col"><p></p></div>
+			<div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+		</section>
+		<section id="progressbar" class="progressbar displaynone">
+			<div class="row">
+				<div class="col-xs-0 col-sm-2 col-md-3 col-lg-4"></div>
+				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+				<div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                 <span class="sr-only">20% Complete</span>
+                </div>
+                </div>
+				</div>
+                <div class="col-xs-0 col-sm-2 col-md-3 col-lg-4"></div>
+			</div>
+		</section>
+        <!-- HTML to write -->
+<a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+
+<!-- Generated markup by the plugin -->
+<div class="tooltip top" role="tooltip">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner">
+    Please select a file
+  </div>
+</div>
+		<link rel="stylesheet" href="base64css.css" type="text/css"/>
+		<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+		<script src="jquery.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<script src="base64.js"></script>
+	</body>
+</html>
